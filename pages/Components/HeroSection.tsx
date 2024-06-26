@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Glide from "@glidejs/glide";
 import Image from "next/image";
 import { MdOutlineLocationOn } from "react-icons/md"; // Import the location icon
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"; // Import social media icons
 import Link from "next/link";
+import logo from "@/images/logo-travel.png"; // Import the logo
 import desert from "@/images/hero2.jpg";
 import nepal from "@/images/slide-2.webp";
 import boat from "@/images/boat.jpg";
@@ -56,10 +57,7 @@ const GlideSlider = () => {
       setCurrentSlide(glide.index);
     });
 
-    // Cleanup function
-    return () => {
-      glide.destroy();
-    };
+    glide.mount();
   }, []);
 
   return (
@@ -99,7 +97,7 @@ const GlideSlider = () => {
                       </p>
                     </Link>
                   </div>
-                  <div className="absolute hidden space-x-8 SM:flex bottom-12 left-8">
+                  <div className="absolute hidden space-x-8 sm:flex bottom-12 left-8">
                     <a
                       href="https://facebook.com"
                       target="_blank"
