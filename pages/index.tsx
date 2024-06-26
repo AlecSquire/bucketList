@@ -4,7 +4,7 @@ import Hero from "./Components/Hero";
 import HeroSection from "./Components/HeroSection";
 import LandingPage from "./Components/LandingPage";
 import TestComponent from "./Components/TestComponent";
-import Glide from "./Components/Glide";
+
 import Desert from "./Components/Desert";
 const inter = Inter({ subsets: ["latin"] });
 
